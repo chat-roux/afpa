@@ -1,0 +1,1 @@
+java -jar ./target/GestionBancaire-0.0.1-SNAPSHOT.jar afpa.cdi.banque.BanqueApplication>.\log\java.log

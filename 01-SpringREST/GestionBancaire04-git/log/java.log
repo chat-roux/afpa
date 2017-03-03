@@ -1,0 +1,93 @@
++---- ETAPE 00 : RECUPERER LE CONTEXTE DE L'APPLICATION -------------------------------+
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v1.5.1.RELEASE)
+
+2017-03-01 14:24:01.036  INFO 4712 --- [           main] afpa.cdi.banque.BanqueApplication        : Starting BanqueApplication v0.0.1-SNAPSHOT on STA6015447 with PID 4712 (C:\Users\1603599\workspaces\01-SpringREST\GestionBancaire02\target\GestionBancaire-0.0.1-SNAPSHOT.jar started by 1603599 in C:\Users\1603599\workspaces\01-SpringREST\GestionBancaire02)
+2017-03-01 14:24:01.045  INFO 4712 --- [           main] afpa.cdi.banque.BanqueApplication        : No active profile set, falling back to default profiles: default
+2017-03-01 14:24:01.948  INFO 4712 --- [           main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3b7951: startup date [Wed Mar 01 14:24:01 CET 2017]; root of context hierarchy
+2017-03-01 14:24:05.253  INFO 4712 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.validation.ValidationAutoConfiguration' of type [class org.springframework.boot.autoconfigure.validation.ValidationAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-03-01 14:24:05.580  INFO 4712 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'validator' of type [class org.springframework.validation.beanvalidation.LocalValidatorFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-03-01 14:24:05.673  INFO 4712 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$3432eb7c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-03-01 14:24:06.564  INFO 4712 --- [           main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8081 (http)
+2017-03-01 14:24:06.599  INFO 4712 --- [           main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2017-03-01 14:24:06.602  INFO 4712 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.11
+2017-03-01 14:24:06.821  INFO 4712 --- [ost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-03-01 14:24:06.821  INFO 4712 --- [ost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 4876 ms
+2017-03-01 14:24:07.153  INFO 4712 --- [ost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-03-01 14:24:07.165  INFO 4712 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-03-01 14:24:07.165  INFO 4712 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-03-01 14:24:07.165  INFO 4712 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-03-01 14:24:07.166  INFO 4712 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-03-01 14:24:08.579  INFO 4712 --- [           main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2017-03-01 14:24:08.640  INFO 4712 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2017-03-01 14:24:09.057  INFO 4712 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.11.Final}
+2017-03-01 14:24:09.060  INFO 4712 --- [           main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2017-03-01 14:24:09.064  INFO 4712 --- [           main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2017-03-01 14:24:09.301  INFO 4712 --- [           main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-03-01 14:24:10.194  INFO 4712 --- [           main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-03-01 14:24:10.767  WARN 4712 --- [           main] org.hibernate.cfg.AnnotationBinder       : HHH000457: Joined inheritance hierarchy [afpa.cdi.banque.model.Compte] defined explicit @DiscriminatorColumn.  Legacy Hibernate behavior was to ignore the @DiscriminatorColumn.  However, as part of issue HHH-6911 we now apply the explicit @DiscriminatorColumn.  If you would prefer the legacy behavior, enable the `hibernate.discriminator.ignore_explicit_for_joined` setting (hibernate.discriminator.ignore_explicit_for_joined=true)
+2017-03-01 14:24:12.482  INFO 4712 --- [           main] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000227: Running hbm2ddl schema export
+Hibernate: alter table compte drop foreign key FKsnawh9nfuhskiouejmi08x0iq
+Hibernate: alter table compte_courant drop foreign key FKgsl4ievqlnuhbkf6rhwmvnik1
+Hibernate: alter table compte_epargne drop foreign key FKiq5g9nnifwxdq6v00aaadpo1
+Hibernate: alter table operation drop foreign key FKkr9nfjf0ipqrw5xwcf9jqq6gv
+Hibernate: drop table if exists client
+Hibernate: drop table if exists compte
+Hibernate: drop table if exists compte_courant
+Hibernate: drop table if exists compte_epargne
+Hibernate: drop table if exists operation
+Hibernate: create table client (code bigint not null auto_increment, nom varchar(255), primary key (code))
+Hibernate: create table compte (type_cpte varchar(2) not null, code varchar(255) not null, date_creation datetime, solde double precision not null, code_clie bigint not null, primary key (code))
+Hibernate: create table compte_courant (decouvert double precision not null, code varchar(255) not null, primary key (code))
+Hibernate: create table compte_epargne (taux double precision not null, code varchar(255) not null, primary key (code))
+Hibernate: create table operation (type_oper varchar(1) not null, numero bigint not null auto_increment, date datetime, montant double precision not null, code_cpte varchar(255), primary key (numero))
+Hibernate: alter table compte add constraint FKsnawh9nfuhskiouejmi08x0iq foreign key (code_clie) references client (code)
+Hibernate: alter table compte_courant add constraint FKgsl4ievqlnuhbkf6rhwmvnik1 foreign key (code) references compte (code)
+Hibernate: alter table compte_epargne add constraint FKiq5g9nnifwxdq6v00aaadpo1 foreign key (code) references compte (code)
+Hibernate: alter table operation add constraint FKkr9nfjf0ipqrw5xwcf9jqq6gv foreign key (code_cpte) references compte (code)
+2017-03-01 14:24:13.065  INFO 4712 --- [           main] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000230: Schema export complete
+2017-03-01 14:24:13.279  INFO 4712 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2017-03-01 14:24:14.115  INFO 4712 --- [           main] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2017-03-01 14:24:15.161  INFO 4712 --- [           main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3b7951: startup date [Wed Mar 01 14:24:01 CET 2017]; root of context hierarchy
+2017-03-01 14:24:15.405  INFO 4712 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-03-01 14:24:15.407  INFO 4712 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-03-01 14:24:15.476  INFO 4712 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-03-01 14:24:15.476  INFO 4712 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-03-01 14:24:15.565  INFO 4712 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-03-01 14:24:15.638  WARN 4712 --- [           main] .t.AbstractTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2017-03-01 14:24:16.936  INFO 4712 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-03-01 14:24:17.076  INFO 4712 --- [           main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8081 (http)
+2017-03-01 14:24:17.088  INFO 4712 --- [           main] afpa.cdi.banque.BanqueApplication        : Started BanqueApplication in 17.227 seconds (JVM running for 18.268)
++---- ETAPE 01 : RECUPERER LES SERVICES NECESSAIRES -----------------------------------+
++---- ETAPE 02 : CREER DES CLIENTS ----------------------------------------------------+
++---- ETAPE 03 : INSERER EN BDD CERTAINS CLIENTS --------------------------------------+
+Hibernate: insert into client (nom) values (?)
+CLIENT CREE -- Nom : ClientNonPersiste -- Code : 1450
+CLIENT CREE -- Nom : ClientTcharou -- Code : 1
++---- ETAPE 04 : CREER DES COMPTES PUIS LES RATTACHER A UN CLIENT ---------------------+
++---- ETAPE 05 : INSERER LES COMPTES EN BDD -------------------------------------------+
+Hibernate: select comptecour0_.code as code2_1_0_, comptecour0_1_.code_clie as code_cli5_1_0_, comptecour0_1_.date_creation as date_cre3_1_0_, comptecour0_1_.solde as solde4_1_0_, comptecour0_.decouvert as decouver1_2_0_ from compte_courant comptecour0_ inner join compte comptecour0_1_ on comptecour0_.code=comptecour0_1_.code where comptecour0_.code=?
+Hibernate: select client0_.code as code1_0_0_, client0_.nom as nom2_0_0_ from client client0_ where client0_.code=?
+Exception : Unable to find afpa.cdi.banque.model.Client with id 1450; nested exception is javax.persistence.EntityNotFoundException: Unable to find afpa.cdi.banque.model.Client with id 1450
+Hibernate: select comptecour0_.code as code2_1_0_, comptecour0_1_.code_clie as code_cli5_1_0_, comptecour0_1_.date_creation as date_cre3_1_0_, comptecour0_1_.solde as solde4_1_0_, comptecour0_.decouvert as decouver1_2_0_ from compte_courant comptecour0_ inner join compte comptecour0_1_ on comptecour0_.code=comptecour0_1_.code where comptecour0_.code=?
+Hibernate: select client0_.code as code1_0_0_, client0_.nom as nom2_0_0_ from client client0_ where client0_.code=?
+Hibernate: insert into compte (code_clie, date_creation, solde, type_cpte, code) values (?, ?, ?, 'CC', ?)
+Hibernate: insert into compte_courant (decouvert, code) values (?, ?)
++---- ETAPE 06 : RECHERCHE DE TOUS LES CLIENTS ----------------------------------------+
+Hibernate: select client0_.code as code1_0_, client0_.nom as nom2_0_ from client client0_
+ClientTcharou
++---- ETAPE 07 : RECHERCHE DE CLIENTS AVEC CRITERES PARTICULIERS ----------------------+
+Hibernate: select client0_.code as code1_0_, client0_.nom as nom2_0_ from client client0_ where client0_.nom like ?
+ClientTcharou
++---- ETAPE 08 : FIN DU PROGRAMME -----------------------------------------------------+
+2017-03-01 14:59:55.113  INFO 4712 --- [       Thread-4] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3b7951: startup date [Wed Mar 01 14:24:01 CET 2017]; root of context hierarchy
+2017-03-01 14:59:55.116  INFO 4712 --- [       Thread-4] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2017-03-01 14:59:55.118  INFO 4712 --- [       Thread-4] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'

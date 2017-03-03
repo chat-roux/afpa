@@ -1,0 +1,1 @@
+mvn clean install -e -X>.\log\mvnCleanPackage.log
